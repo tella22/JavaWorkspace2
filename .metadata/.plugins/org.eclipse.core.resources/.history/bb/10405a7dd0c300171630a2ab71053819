@@ -1,0 +1,48 @@
+
+public class Ej01 {
+
+	public static void main(String[] args) {
+
+		int num;
+		int vecNum[] = new int[20];
+		int suma=0;
+		int contMay=0;
+		int contMen=0;
+		int eqMed=0;
+
+		for (int k=0; k<vecNum.length; k++){
+			//			num = (int) Math.floor(Math.random()*(MAX-MIN+1)+MIN);
+			num = (int) Math.floor(Math.random()*(10+10+1)-10);
+			vecNum[k]=num;
+		}
+
+		for (int k2 : vecNum) {
+			suma=suma+k2;
+		}
+
+		int media=0;
+		media=suma/vecNum.length;
+		System.out.println(media);
+
+		for (int k2 : vecNum) {
+			if(k2>media) {
+				contMay=contMay+1;
+			}else if(k2<media) {
+				contMen=contMen+1;
+			}else {
+				eqMed=eqMed+1;
+			}
+		}
+		
+		System.out.println("Hay " +contMay+ " numero mayores a la media");
+		System.out.println("Hay " +contMen+ " numero menores a la media");
+		System.out.println("Hay " +eqMed+ " numero iguales a la media");
+
+
+		//		for (k=0; k<vecNum.length; k++){
+		//			
+		//		}
+
+	}
+
+}

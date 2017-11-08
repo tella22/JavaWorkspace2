@@ -1,0 +1,31 @@
+
+public class Ej01 {
+
+	public static void main(String[] args) {
+		
+		int num;
+		int vecNum[] = new int[20];
+		int suma=0;
+		
+		for (int k=0; k<vecNum.length; k++){
+//			num = (int) Math.floor(Math.random()*(MAX-MIN+1)+MIN);
+			num = (int) Math.floor(Math.random()*(10+10+1)-10);
+			vecNum[k]=num;
+		}
+		
+		for (int k2 : vecNum) {
+			suma=suma+k2;
+		}
+		
+		int media=0;
+		media=suma/vecNum.length;
+		System.out.println(media);
+		
+		
+//		for (k=0; k<vecNum.length; k++){
+//			
+//		}
+		
+	}
+
+}
