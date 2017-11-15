@@ -13,6 +13,20 @@ public class Ej37 {
 				matriz[f][c]=aleatorio;
 			}
 		}
+		for (f=0;f<4;f++) {
+			for (c=0;c<5;c++) {
+				System.out.printf("%5d", matriz[f][c]);
+				cont=cont+1;
+				if (cont%5==0) {
+					System.out.println();
+				}
+			}
+		}
+		
+
+		System.out.println();
+		System.out.println("↓↓ Matriz Traspuesta ↓↓");
+		System.out.println();
 		
 		for (c=0;c<5;c++) {
 			for (f=0;f<4;f++) {
@@ -23,7 +37,7 @@ public class Ej37 {
 				}
 			}
 		}
-
+		
 	}
 
 }
