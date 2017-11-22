@@ -6,7 +6,7 @@ public class Ej41 {
 		int[][][] matriz = new int[5][10][20];
 		int[][] curso = new int[5][10];
 		int numero=0;
-		int min=0, max=0;
+		int max=0;
 
 		for(int p=0;p<5;p++) {
 			for (int f=0;f<10;f++) {
@@ -22,6 +22,7 @@ public class Ej41 {
 				curso[l][k]=0;
 			}
 		}
+		
 		for(int p=0;p<5;p++) {
 			for (int f=0;f<10;f++) {
 				for (int c=0;c<20;c++) {
@@ -30,20 +31,17 @@ public class Ej41 {
 			}
 		}
 		
-		
-		for (int f=0;f<10;f++) {
+		for (int p=0;p<5;p++) {
 			max=0;
-			min=0;
-			for(int p=0;p<5;p++) {
+			for(int f=0;f<10;f++) {
 				curso[p][f]/=20;
-				System.out.println(curso[p][f]);
-				if(curso[p][f]>curso[max][f]) {
-					max=p;
+				System.out.printf("%5d", curso[p][f]);
+				if(curso[p][f]>curso[p][max]) {
+					max=f;
 				}
 			}
-			System.out.println("La nota media mas alta del curso " +(f+1)+ " es del centro "+(max+1)+"\n");
+			System.out.println("\n La nota media mas alta del centro " +(p+1)+ " es la numero "+(max+1)+"\n");
 		}
 		
 	}
-
 }
