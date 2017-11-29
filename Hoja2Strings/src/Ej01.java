@@ -7,7 +7,9 @@ public class Ej01 {
 		String palabra;
 		String letra;
 		int k;
-		String mayusculas="";
+		String mayusculas;
+		String may;
+		char intento;
 
 		Scanner teclado = new Scanner(System.in);
 		System.out.println("Introduce una palabra");
@@ -15,14 +17,15 @@ public class Ej01 {
 		System.out.println("Introduce una letra");
 		letra=teclado.nextLine();
 
-		for (k=0; k<palabra.length(); k++) {
-			if (palabra.substring(k)==letra){
-				mayusculas = letra.toUpperCase();
+			mayusculas = letra.toUpperCase();
+			may=palabra.toUpperCase();
+
+		for(k=0; k<may.length(); k++) {
+			intento=may.charAt(k);
+			if (String.valueOf(intento).equals(mayusculas)) {
+				System.out.print("La palabra se encuentra en la posición " + (k+1));
 			}
-			System.out.println(mayusculas);
 		}
-		
-		
 		
 		teclado.close();
 	}
